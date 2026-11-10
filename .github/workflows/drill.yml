@@ -1,0 +1,12 @@
+name: incident-drill
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  stuck-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate stuck build (10-minute sleep)
+        run: sleep 600
